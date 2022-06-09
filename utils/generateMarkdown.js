@@ -14,31 +14,39 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return `# ${data.title}
 
+
 ## Description
 ${data.description}
 
+
 ## Table of Contents
+
 
 ## Installation
 ${data.installation}
+![alt text](./screenshot.png)
+
 
 ## Usage
 ${data.usage}
 
+
 ## License
 ${renderLicenseSection(data.license)}
+
 
 ## How to Contribute
 ${data.contribute}
 
+
 ## Tests
 ${data.tests}
 
+
 ## Questions
-${data.questions}
-
-
-`;
+If you have any questions please contact me:
+GitHub username: ${data.username}
+Email address: ${data.emailaddress}`;
 }
 
 module.exports = generateMarkdown;

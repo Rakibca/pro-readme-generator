@@ -17,48 +17,63 @@ function init() {
     .prompt([{
         type: "input",
         name: "title",
-        message: "What is the project title?"
+        message: "Please enter the project title:"
       },
       {
         type: "input",
-        name: "name",
-        message: "Who is the project author?"
+        name: "description",
+        message: "Please enter the project description:"
       },
       {
         type: "input",
-        name: "name",
-        message: "Why did you work on this project?"
+        name: "installation",
+        message: "What command is required to install dependencies?"
       },
       {
         type: "input",
-        name: "name",
-        message: "motivation?"
+        name: "usage",
+        message: "Please provide instructions for this program usage:"
       },
       {
         type: "input",
-        name: "name",
-        message: "What was solved?"
+        name: "license",
+        message: "What license did you use for this project?"
       },
       {
         type: "input",
-        name: "name",
-        message: "Please enter a brief description?"
+        name: "contribute",
+        message: "What contribution info do you want users to know?"
+      },
+      {
+        type: "input",
+        name: "tests",
+        message: "What command is required to run tests?"
+      },
+
+      {
+        type: "input",
+        name: "username",
+        message: "Please enter your GitHub username:"
+      },
+
+      {
+        type: "input",
+        name: "emailaddress",
+        message: "Please enter your emailaddress:"
       },
     ])
     .then((answers) => {
-      console.log("Doing something");
-      writeREADME("README.md", generateMD({
-        ...answers
-      }))
+      console.log("Creating the README.md file");
+      writeREADME("README.md", generateMD(answers))
     })
 }
 
 // Creates a function to write README file
-function writeREADME(filename, answers) {
+function writeREADME(filename, fileinfo) {
 
-  const readmePageContent = generateMD(answers);
+  const readmePageContent = fileinfo;
 
   fs.writeFile('README.md', readmePageContent, (err) =>
-    err ? console.log(err) : console.log('Successfully created README.md!')
+    err ? console.log(err) : console.log('Successfully created the README.md file!')
   );
 }
