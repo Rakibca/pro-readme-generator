@@ -3,8 +3,7 @@
 function renderLicenseBadge(license) {
   if (license) {
     return `[![${license} license](https://img.shields.io/badge/license-${license}-blue)](${renderLicenseLink(license)})`
-  }
-  else {
+  } else {
     return ``;
   }
 }
@@ -16,17 +15,13 @@ function renderLicenseLink(license) {
 
   if (license === "MIT") {
     return `https://opensource.org/licenses/MIT`
-  }
-  else if (license === "Apache_2.0") {
+  } else if (license === "Apache_2.0") {
     return `https://www.apache.org/licenses/LICENSE-2.0`
-  }
-  else if (license === "GPL") {
+  } else if (license === "GPL") {
     return `https://www.gnu.org/licenses/gpl-3.0.en.html`
-  }
-  else if (license === "BSD") {
+  } else if (license === "BSD") {
     return `https://opensource.org/licenses/BSD-3-Clause`
-  }
-  else {
+  } else {
     return ``;
   }
 }

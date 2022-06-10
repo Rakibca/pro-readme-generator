@@ -15,53 +15,53 @@ function init() {
   // Creates an array of questions for user input and to validate the answers
   inquirer
     .prompt([{
-      type: "input",
-      name: "title",
-      message: "Please enter the project title:"
-    },
-    {
-      type: "input",
-      name: "description",
-      message: "Please enter the project description:"
-    },
-    {
-      type: "input",
-      name: "installation",
-      message: "What command is required to install package dependencies?"
-    },
-    {
-      type: "input",
-      name: "usage",
-      message: "Please provide instructions for this program usage:"
-    },
-    {
-      type: "checkbox",
-      name: "license",
-      message: "What license did you use for this project? Please choose only one:",
-      choices: ["MIT", "Apache_2.0", "GPL", "BSD"]
-    },
-    {
-      type: "input",
-      name: "contribute",
-      message: "What contribution info do you want users to know?"
-    },
-    {
-      type: "input",
-      name: "tests",
-      message: "What command is required to run tests?"
-    },
+        type: "input",
+        name: "title",
+        message: "Please enter the project title:"
+      },
+      {
+        type: "input",
+        name: "description",
+        message: "Please enter the project description:"
+      },
+      {
+        type: "input",
+        name: "installation",
+        message: "What command is required to install package dependencies?"
+      },
+      {
+        type: "input",
+        name: "usage",
+        message: "Please provide instructions for this program usage:"
+      },
+      {
+        type: "checkbox",
+        name: "license",
+        message: "What license did you use for this project? Please choose only one:",
+        choices: ["MIT", "Apache_2.0", "GPL", "BSD"]
+      },
+      {
+        type: "input",
+        name: "contribute",
+        message: "What contribution info do you want users to know?"
+      },
+      {
+        type: "input",
+        name: "tests",
+        message: "What command is required to run tests?"
+      },
 
-    {
-      type: "input",
-      name: "username",
-      message: "Please enter your GitHub username:"
-    },
+      {
+        type: "input",
+        name: "username",
+        message: "Please enter your GitHub username:"
+      },
 
-    {
-      type: "input",
-      name: "emailaddress",
-      message: "Please enter your email address:"
-    },
+      {
+        type: "input",
+        name: "emailaddress",
+        message: "Please enter your email address:"
+      },
     ])
     .then((answers) => {
       console.log("Creating the README.md file");
