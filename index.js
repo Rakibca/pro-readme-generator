@@ -38,7 +38,7 @@ function init() {
       type: "checkbox",
       name: "license",
       message: "What license did you use for this project? Please choose only one:",
-      choices: ["MIT", "Apache 2.0", "GPL", "BSD"]
+      choices: ["MIT", "Apache_2.0", "GPL", "BSD"]
     },
     {
       type: "input",
